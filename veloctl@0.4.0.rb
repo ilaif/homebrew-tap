@@ -10,7 +10,12 @@ class VeloctlAT040 < Formula
 
         def install
           bin.install "veloctl"
-      @@ -26,8 +26,8 @@ def install
+          system bin/"veloctl completion bash > bash_completion.bash"
+          bash_completion.install "bash_completion.bash" => "veloctl"
+          system bin/"veloctl completion zsh > zsh_completion.zsh"
+          zsh_completion.install "zsh_completion.zsh" => "_veloctl"
+          system bin/"veloctl completion fish > fish_completion.fish"
+          fish_completion.install "fish_completion.fish" => "veloctl.fish"
         end
       end
       if Hardware::CPU.intel?
@@ -19,7 +24,15 @@ class VeloctlAT040 < Formula
 
         def install
           bin.install "veloctl"
-      @@ -46,8 +46,8 @@ def install
+          system bin/"veloctl completion bash > bash_completion.bash"
+          bash_completion.install "bash_completion.bash" => "veloctl"
+          system bin/"veloctl completion zsh > zsh_completion.zsh"
+          zsh_completion.install "zsh_completion.zsh" => "_veloctl"
+          system bin/"veloctl completion fish > fish_completion.fish"
+          fish_completion.install "fish_completion.fish" => "veloctl.fish"
+        end
+      end
+    end
 
     on_linux do
       if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -28,7 +41,12 @@ class VeloctlAT040 < Formula
 
         def install
           bin.install "veloctl"
-      @@ -63,8 +63,8 @@ def install
+          system bin/"veloctl completion bash > bash_completion.bash"
+          bash_completion.install "bash_completion.bash" => "veloctl"
+          system bin/"veloctl completion zsh > zsh_completion.zsh"
+          zsh_completion.install "zsh_completion.zsh" => "_veloctl"
+          system bin/"veloctl completion fish > fish_completion.fish"
+          fish_completion.install "fish_completion.fish" => "veloctl.fish"
         end
       end
       if Hardware::CPU.intel?
