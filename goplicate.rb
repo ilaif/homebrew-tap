@@ -5,20 +5,20 @@
 class Goplicate < Formula
   desc ""
   homepage "https://github.com/ilaif/goplicate"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ilaif/goplicate/releases/download/v0.1.1/goplicate_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "3dc6a8b5e027d1331adb0e9a1ba31ee1c855baa6f7b92e112576408fbb4c357e"
+    if Hardware::CPU.intel?
+      url "https://github.com/ilaif/goplicate/releases/download/v0.1.2/goplicate_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "4990d8e8dcf88020a69caabcafdffae2d9d14f4493fb9658fd0b9d9cc9f7049d"
 
       def install
         bin.install "goplicate"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ilaif/goplicate/releases/download/v0.1.1/goplicate_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "9de33fa3899c486e668ec4f551d60d2d2843f1f69b816b6224d99438a5f45603"
+    if Hardware::CPU.arm?
+      url "https://github.com/ilaif/goplicate/releases/download/v0.1.2/goplicate_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "4e1734429254d24c3157bf936724b7bb27047dbc991618460ed832e3318413ea"
 
       def install
         bin.install "goplicate"
@@ -28,16 +28,16 @@ class Goplicate < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ilaif/goplicate/releases/download/v0.1.1/goplicate_0.1.1_Linux_arm64.tar.gz"
-      sha256 "54c25062247cbec3f6f596eba3acf485026c8b15e04186797b0dc043a0528b9c"
+      url "https://github.com/ilaif/goplicate/releases/download/v0.1.2/goplicate_0.1.2_Linux_arm64.tar.gz"
+      sha256 "5f1904003d53452013605cbfff7dc5616cd050343aac55b8752db2b9578b3626"
 
       def install
         bin.install "goplicate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ilaif/goplicate/releases/download/v0.1.1/goplicate_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "a6aa0f9b6423cdb7e1ccb1a9de536cd4b37253c2e217082b5709408663a1c134"
+      url "https://github.com/ilaif/goplicate/releases/download/v0.1.2/goplicate_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "187183ae41e0a1603e6aa75c476880a87bbd52368d1e293d7ee71efe5614fc2a"
 
       def install
         bin.install "goplicate"
